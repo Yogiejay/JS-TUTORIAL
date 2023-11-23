@@ -14,4 +14,12 @@ if ("sr") {
   console.log(false);
 } else {
   console.log(true);
-}
+} // pre and post increment
+
+
+var a, b;
+a = 3;
+b = a++;
+console.log("a: ".concat(a, " , b: ").concat(b));
+b = ++a;
+console.log("a: ".concat(a, " , b: ").concat(b));

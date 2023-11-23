@@ -13,3 +13,12 @@ if ("sr") {
 else {
     console.log(true);
 }
+
+// pre and post increment
+let a, b;
+a = 3;
+b = a++;
+console.log(`a: ${a} , b: ${b}`);
+
+b = ++a;
+console.log(`a: ${a} , b: ${b}`);
