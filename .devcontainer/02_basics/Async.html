@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Lets Learn Async in Javascript</title>
+</head>
+
+<body>
+    <h1>Implementing Async in Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <!-- <script src="Async.js"></script> -->
+    <script>
+        let timer = null;
+        // document.querySelector("#start").addEventListener("click", () => {
+        //     timer = setInterval(() => {
+        //         console.log("Hi Yogesh " + Date.now());
+        //     }, 1000);
+        // });
+        // document.querySelector("#stop").addEventListener("click", () => { clearInterval(timer) }
+        // );
+        // document.querySelector("#yessir").addEventListener("click", () => {
+        //     setInterval(() => {
+        //         console.log("Hi Bro");
+        //     }, 1000);
+        // }
+        // );
+        document.querySelector("#start").addEventListener("click", () => {
+            if (timer === null) {
+                timer = setInterval(() => {
+                    let color = "123456789ABCDEF";
+                    let HexCode = "#"
+                    for (let i = 0; i < 6; i++) {
+                        HexCode += color[Math.floor(Math.random() * 16)];
+                    }
+                    document.body.style.backgroundColor = HexCode;
+                }, 1000);
+            }
+
+        });
+        document.querySelector("#stop").addEventListener("click", () => {
+            clearInterval(timer);
+            timer = null;
+        }
+
+        );  
+    </script>
+</body>
+
+</html>
